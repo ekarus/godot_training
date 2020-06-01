@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Training"
+run/main_scene="res://UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [rendering]

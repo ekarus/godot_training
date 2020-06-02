@@ -11,11 +11,11 @@ var spawn_progression_over_time = {
 
 export var spawn_radius = 100
 
-export(NodePath) var player
+var player
 
 export (PackedScene) onready var enemy_scene = preload("res://actors/Enemy.tscn")
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	rng.randomize()
 	
@@ -24,8 +24,11 @@ func _ready():
 	timer.set_one_shot(true)
 	add_child(timer)
 	
+	player = get_tree().get_root().find_node("Player", true, false)
+	
 	_spawn_new_enemy()
 	_schedule_next_spawn()
+
 
 func _schedule_next_spawn():
 	var range_keys = spawn_progression_over_time.keys()
@@ -40,21 +43,21 @@ func _schedule_next_spawn():
 	timer.set_wait_time(rng.randi_range(range_values[0], range_values[1]))
 	timer.start()
 
+
 func _on_timer_tick():
 	_spawn_new_enemy()
 	_schedule_next_spawn()
 	pass
 
+
 func _spawn_new_enemy():
-	var player_pos = get_node(player).get_global_position()
+	var player_pos = player.get_global_position()
 	var spawn_angle = rng.randf_range(0, 2*PI)
 	var position = player_pos + Vector2(spawn_radius, 0).rotated(spawn_angle)
 	var nodeInstance = enemy_scene.instance()
-	get_tree().get_root().add_child(nodeInstance)
+	add_child(nodeInstance)
 	nodeInstance.set_global_position(position)
-	print("spawned ", position.x, " ", position.y)
-	print("player_pos ", player_pos.x, " ", player_pos.y)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	game_time_passed += delta

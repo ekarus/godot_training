@@ -1,0 +1,13 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://font/olympic_carrier/olympiccarriersemital.ttf" type="DynamicFontData" id=1]
+
+[resource]
+size = 20
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 5
+extra_spacing_bottom = 5
+extra_spacing_char = 5
+extra_spacing_space = 5
+font_data = ExtResource( 1 )

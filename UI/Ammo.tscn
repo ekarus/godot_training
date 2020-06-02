@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Texture/weapon.png" type="Texture" id=1]
+[ext_resource path="res://font/olympic_carrier/olympiccarriersemital.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://UI/default_theme.tres" type="Theme" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 2 )
+
+[node name="Control" type="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -793.0
+margin_bottom = -535.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -74.2625
+margin_top = -22.5916
+margin_right = 69.7375
+margin_bottom = 69.4084
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -210.242
+margin_top = -21.3278
+margin_right = -149.242
+margin_bottom = 28.6722
+rect_pivot_offset = Vector2( 59, 35.5 )
+custom_fonts/font = SubResource( 1 )
+text = "10"
+align = 2
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -168.887
+margin_top = -22.229
+margin_right = -109.887
+margin_bottom = 49.771
+rect_pivot_offset = Vector2( 59, 35.5 )
+theme = ExtResource( 4 )
+text = "/"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -131.258
+margin_top = -22.8278
+margin_right = -72.2577
+margin_bottom = 49.1722
+rect_pivot_offset = Vector2( 59, 35.5 )
+theme = ExtResource( 4 )
+text = "10"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

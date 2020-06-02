@@ -1,0 +1,224 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://UI/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Texture/Ресурс 7.png" type="Texture" id=2]
+[ext_resource path="res://font/olympic_carrier/olympiccarriertitle.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Texture/Ресурс 3.png" type="Texture" id=4]
+[ext_resource path="res://Texture/progress.png" type="Texture" id=5]
+[ext_resource path="res://Texture/hp.png" type="Texture" id=6]
+[ext_resource path="res://Texture/scoreIcon.png" type="Texture" id=7]
+[ext_resource path="res://Texture/weapon.png" type="Texture" id=8]
+[ext_resource path="res://font/olympic_carrier/olympiccarriersemital.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 9 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Control" type="NinePatchRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -213.0
+margin_top = 10.0
+margin_right = -19.9999
+margin_bottom = 50.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 14.0
+margin_top = -36.0
+margin_right = 85.0
+margin_bottom = 35.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -129.317
+margin_top = -35.5
+margin_right = -3.31711
+margin_bottom = 36.5
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 322.0
+margin_bottom = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bar" type="HBoxContainer" parent="HBoxContainer"]
+margin_right = 295.0
+margin_bottom = 40.0
+custom_constants/separation = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="NinePatchRect" parent="HBoxContainer/Bar"]
+margin_right = 120.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 120, 0 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Bar/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 9.70863
+margin_top = -18.0
+margin_right = 45.7086
+margin_bottom = 18.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer/Bar/Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -77.0588
+margin_top = -16.5
+margin_right = -6.0588
+margin_bottom = 15.5
+theme = ExtResource( 1 )
+text = "10/100"
+align = 2
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="HBoxContainer/Bar"]
+margin_left = 123.0
+margin_right = 295.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 172, 0 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )
+nine_patch_stretch = true
+
+[node name="Control2" type="NinePatchRect" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -251.0
+margin_top = -85.0
+margin_right = -19.9999
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -74.2625
+margin_top = -22.5916
+margin_right = 69.7375
+margin_bottom = 69.4084
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -210.242
+margin_top = -21.3278
+margin_right = -149.242
+margin_bottom = 28.6722
+rect_pivot_offset = Vector2( 59, 35.5 )
+custom_fonts/font = SubResource( 2 )
+text = "10"
+align = 2
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -168.887
+margin_top = -22.229
+margin_right = -109.887
+margin_bottom = 49.771
+rect_pivot_offset = Vector2( 59, 35.5 )
+theme = ExtResource( 1 )
+text = "/"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -131.258
+margin_top = -22.8278
+margin_right = -72.2577
+margin_bottom = 49.1722
+rect_pivot_offset = Vector2( 59, 35.5 )
+theme = ExtResource( 1 )
+text = "10"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

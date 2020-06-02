@@ -1,13 +1,8 @@
 [gd_scene format=2]
 
-[node name="Title" type="Label"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_right = 40.0
-margin_bottom = 14.0
-text = "SCORE BOARD"
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

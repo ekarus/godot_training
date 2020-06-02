@@ -6,5 +6,5 @@ func _init():
 	pass
 
 
-func process_logic(player):
+func process_logic(player, our_state):
 	pass

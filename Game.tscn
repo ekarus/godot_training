@@ -1,3 +1,22 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Tiles/ground_tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LevelUtils/EnemySpawner.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -196612, 2, 0, -262144, 5, 0, -262140, 5, 0, -262136, 2, 0, -262132, 5, 0, -262128, 5, 0, -262124, 3, 0, 65532, 2, 0, 0, 2, 0, 4, 5, 0, 8, 2, 0, 12, 2, 0, 16, 2, 0, 20, 6, 0, 327676, 5, 0, 262144, 5, 0, 262148, 2, 0, 262152, 2, 0, 262156, 5, 0, 262160, 5, 0, 262164, 3, 0, 589820, 2, 0, 524288, 5, 0, 524292, 2, 0, 524296, 5, 0, 524300, 2, 0, 524304, 5, 0, 524308, 6, 0, 851964, 2, 0, 786432, 5, 0, 786436, 5, 0, 786440, 2, 0, 786444, 5, 0, 786448, 5, 0, 786452, 3, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 550, 324 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 4 )]

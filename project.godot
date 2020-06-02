@@ -8,9 +8,44 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Object",
+"class": "BehaviorAction",
+"language": "GDScript",
+"path": "res://actors/behaviors/BehaviorAction.gd"
+}, {
+"base": "Node2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://actors/Enemy.gd"
+}, {
+"base": "Object",
+"class": "EnemyBehavior",
+"language": "GDScript",
+"path": "res://actors/behaviors/EnemyBehavior.gd"
+}, {
+"base": "EnemyRangedBehavior",
+"class": "EnemyMeleeBehavior",
+"language": "GDScript",
+"path": "res://actors/behaviors/EnemyMeleeBehavior.gd"
+}, {
+"base": "EnemyBehavior",
+"class": "EnemyRangedBehavior",
+"language": "GDScript",
+"path": "res://actors/behaviors/EnemyRangedBehavior.gd"
+}, {
+"base": "Object",
+"class": "EnemyState",
+"language": "GDScript",
+"path": "res://actors/behaviors/EnemyState.gd"
+} ]
 _global_script_class_icons={
-
+"BehaviorAction": "",
+"Enemy": "",
+"EnemyBehavior": "",
+"EnemyMeleeBehavior": "",
+"EnemyRangedBehavior": "",
+"EnemyState": ""
 }
 
 [application]

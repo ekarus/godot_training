@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Src/GGP/BaseWeapon.gd" type="Script" id=1]
+[ext_resource path="res://actors/Bullet.tscn" type="PackedScene" id=2]
+
+[node name="Shot_base" type="Node2D"]
+script = ExtResource( 1 )
+Projectile = ExtResource( 2 )
+
+[node name="Cooldown" type="Timer" parent="."]
+one_shot = true

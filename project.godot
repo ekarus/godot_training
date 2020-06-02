@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://Src/GGP/Actor.gd"
+}, {
 "base": "Object",
 "class": "BehaviorAction",
 "language": "GDScript",
@@ -38,14 +43,33 @@ _global_script_classes=[ {
 "class": "EnemyState",
 "language": "GDScript",
 "path": "res://actors/behaviors/EnemyState.gd"
+}, {
+"base": "Actor",
+"class": "PlayerActor",
+"language": "GDScript",
+"path": "res://Src/GGP/Player.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://Src/GGP/Projectile.gd"
+}, {
+"base": "Node2D",
+"class": "WeaponBase",
+"language": "GDScript",
+"path": "res://Src/GGP/BaseWeapon.gd"
 } ]
 _global_script_class_icons={
+"Actor": "",
 "BehaviorAction": "",
 "Enemy": "",
 "EnemyBehavior": "",
 "EnemyMeleeBehavior": "",
 "EnemyRangedBehavior": "",
-"EnemyState": ""
+"EnemyState": "",
+"PlayerActor": "",
+"Projectile": "",
+"WeaponBase": ""
 }
 
 [application]
@@ -53,6 +77,38 @@ _global_script_class_icons={
 config/name="Training"
 run/main_scene="res://UI/MainMenu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+ObjectRegistry="*res://Src/AutoLoad/ObjectRegistry.tscn"
+
+[input]
+
+player_move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+player_move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+player_move_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+player_move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+player_shoot={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
 
 [rendering]
 

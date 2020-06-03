@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Texture/Ресурс 1.png" type="Texture" id=2]
+[ext_resource path="res://Texture/GenericBTNPress.png" type="Texture" id=3]
+[ext_resource path="res://Texture/GenericBTNHover.png" type="Texture" id=4]
+
+
+
+
+
+[node name="Button" type="TextureButton"]
+margin_right = 140.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 140, 45 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 11.5691
+margin_top = 11.3214
+margin_right = 123.569
+margin_bottom = 33.3214
+theme = ExtResource( 1 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}

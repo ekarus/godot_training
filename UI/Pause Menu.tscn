@@ -1,0 +1,139 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://UI/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Texture/Ресурс 1.png" type="Texture" id=2]
+[ext_resource path="res://Texture/Overlay.png" type="Texture" id=3]
+[ext_resource path="res://Texture/backmenu.png" type="Texture" id=4]
+[ext_resource path="res://font/olympic_carrier/olympiccarrierlaser.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Texture/GenericBTNPress.png" type="Texture" id=6]
+[ext_resource path="res://Texture/GenericBTNHover.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay" type="TextureRect" parent="."]
+anchor_left = -0.349
+anchor_top = -0.348
+anchor_right = 1.349
+anchor_bottom = 1.347
+margin_left = 11.0985
+margin_top = -0.935059
+margin_right = 10.3464
+margin_bottom = -0.935181
+texture = ExtResource( 3 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PausePopUp" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -229.0
+margin_top = -127.0
+margin_right = 229.0
+margin_bottom = 127.0
+texture = ExtResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PausePopUp"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.273
+margin_top = -173.708
+margin_right = 197.727
+margin_bottom = -72.7078
+custom_fonts/font = SubResource( 1 )
+text = "Pause"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PausePopUp"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -48.9813
+margin_right = 110.0
+margin_bottom = 79.0187
+custom_constants/separation = 15
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="TextureButton" parent="PausePopUp/VBoxContainer"]
+margin_top = 11.0
+margin_right = 220.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 140, 45 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PausePopUp/VBoxContainer/Button3"]
+anchor_left = 0.5
+anchor_top = 0.489
+anchor_right = 0.5
+anchor_bottom = 0.489
+margin_left = -56.0
+margin_top = -11.005
+margin_right = 56.0
+margin_bottom = 10.995
+theme = ExtResource( 1 )
+text = "Restart"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="TextureButton" parent="PausePopUp/VBoxContainer"]
+margin_top = 71.0
+margin_right = 220.0
+margin_bottom = 116.0
+rect_min_size = Vector2( 140, 45 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PausePopUp/VBoxContainer/Button4"]
+anchor_left = 0.5
+anchor_top = 0.489
+anchor_right = 0.5
+anchor_bottom = 0.489
+margin_left = -89.6199
+margin_top = -11.005
+margin_right = 93.3801
+margin_bottom = 10.995
+theme = ExtResource( 1 )
+text = "Back to game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

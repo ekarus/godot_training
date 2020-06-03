@@ -23,12 +23,12 @@ func _process_input():
 	
 	if Input.is_action_pressed("player_move_left"):
 		desiredDirection.x += -1
-	elif Input.is_action_pressed("player_move_right"):
+	if Input.is_action_pressed("player_move_right"):
 		desiredDirection.x += 1
-	elif Input.is_action_pressed("player_move_up"):
-		desiredDirection.y += 1
-	elif Input.is_action_pressed("player_move_down"):
+	if Input.is_action_pressed("player_move_up"):
 		desiredDirection.y += -1
+	if Input.is_action_pressed("player_move_down"):
+		desiredDirection.y += 1
 		
 	MovementDir = desiredDirection
 	

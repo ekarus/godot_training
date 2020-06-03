@@ -1,4 +1,4 @@
-extends Node2D
+extends Actor
 class_name Enemy
 
 onready var behavior = $Behaviour
@@ -18,7 +18,9 @@ func _process(delta):
 	var process_result = behavior.process_logic(player, state)
 	
 	if process_result.should_move:
-		set_position(get_position() + (process_result.move_target_pos - get_position()).normalized() * speed * delta)
+		MovementDir = process_result.move_target_pos - get_position()
+	else:
+		MovementDir = Vector2()
 	
 	if process_result.should_attack:
 		pass

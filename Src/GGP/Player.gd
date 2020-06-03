@@ -30,7 +30,7 @@ func _process_input():
 	if Input.is_action_pressed("player_move_down"):
 		desiredDirection.y += 1
 		
-	MovementDir = desiredDirection.normalized()
+	MovementDir = desiredDirection
 	
 	if Input.is_action_pressed("player_shoot"):
 		(activeWeapon as WeaponBase)._shoot(self.position + activeWeapon.position, -self.rotation_degrees)

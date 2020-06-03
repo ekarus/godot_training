@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Character/Anim_Rifle/idle/survivor-idle_rifle_0.png" type="Texture" id=1]
 [ext_resource path="res://Src/GGP/Player.gd" type="Script" id=2]
 [ext_resource path="res://actors/BaseWeapon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://actors/WeaponShotgun.tscn" type="PackedScene" id=4]
 [ext_resource path="res://actors/Bullet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Src/GGP/PlayerCamera.gd" type="Script" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 72.8291
@@ -28,6 +29,7 @@ current = true
 zoom = Vector2( 2, 2 )
 smoothing_enabled = true
 smoothing_speed = 7.0
+script = ExtResource( 6 )
 
 [node name="Shotgun" parent="." instance=ExtResource( 4 )]
 position = Vector2( 179.373, 9.04404 )
@@ -48,3 +50,4 @@ cooldownTime = 0.166
 
 [node name="ReloadCooldown" type="Timer" parent="."]
 one_shot = true
+[connection signal="on_player_shoot" from="." to="Camera2D" method="_on_player_shoot"]

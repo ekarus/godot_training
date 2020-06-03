@@ -12,6 +12,8 @@ enum WEAPON_TYPE {WEAPON_SHOTGUN, WEAPON_RIFLE}
 
 export (WEAPON_TYPE) var DEFAULT_WEAPON = WEAPON_TYPE.WEAPON_RIFLE
 
+signal on_player_shoot
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_switch_weapon(DEFAULT_WEAPON)
@@ -20,7 +22,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	_process_input()
 	pass
 
@@ -48,6 +49,7 @@ func _process_input():
 		
 	if Input.is_action_pressed("player_shoot") && cooldown.is_stopped():
 		(activeWeapon as WeaponBase)._shoot()
+		emit_signal("on_player_shoot")
 	
 	if Input.is_action_pressed("player_weapon_reload") && activeWeapon._can_reload(): 
 		activeWeapon._reload()

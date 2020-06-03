@@ -40,4 +40,4 @@ func _process_input():
 	
 func _input(event):
 	if event is InputEventMouseMotion:
-		look_at(event.position)
+		TargetPoint = event.position

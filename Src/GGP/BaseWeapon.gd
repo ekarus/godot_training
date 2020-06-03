@@ -40,6 +40,13 @@ func _shoot():
 
 	pass
 	
+func _can_reload() -> bool:
+	if currentAmmo < MAG_AMMO:
+		return true
+	else:
+		return false
+	pass
+	
 static func random_spread(value: float) -> float:
 	var half_spread := value / 2.0
 	return rand_range(-half_spread, half_spread)

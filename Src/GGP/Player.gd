@@ -38,7 +38,8 @@ func _process_input():
 		desiredDirection.y += 1
 		
 	MovementDir = desiredDirection
-	
+	TargetPoint =  get_global_mouse_position()
+		
 	if Input.is_action_pressed("player_weapon_switch_rifle"):
 		_switch_weapon(WEAPON_TYPE.WEAPON_RIFLE)
 		
@@ -48,6 +49,9 @@ func _process_input():
 	if Input.is_action_pressed("player_shoot") && cooldown.is_stopped():
 		(activeWeapon as WeaponBase)._shoot()
 	
+	if Input.is_action_pressed("player_weapon_reload") && activeWeapon._can_reload(): 
+		activeWeapon._reload()
+		
 	pass
 	
 	
@@ -59,8 +63,4 @@ func _switch_weapon(weapon_type):
 			activeWeapon = $Shotgun
 	cooldown.wait_time = activeWeapon.DRAW_COOLDOWN
 	cooldown.start()
-	pass	
-	
-func _input(event):
-	if event is InputEventMouseMotion:
-		TargetPoint = event.position
+	pass

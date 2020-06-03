@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground_Tile_01_C.png-fe3b6f3bd964733c81b60b12e8e607ac.stex"
+path="res://.import/survivor-shoot_shotgun_0.png-4563d5a7d1ec0119902730a45fa79690.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/Ground_Tile_01_C.png"
-dest_files=[ "res://.import/Ground_Tile_01_C.png-fe3b6f3bd964733c81b60b12e8e607ac.stex" ]
+source_file="res://assets/Character/Anim_Shotgun/shoot/survivor-shoot_shotgun_0.png"
+dest_files=[ "res://.import/survivor-shoot_shotgun_0.png-4563d5a7d1ec0119902730a45fa79690.stex" ]
 
 [params]
 

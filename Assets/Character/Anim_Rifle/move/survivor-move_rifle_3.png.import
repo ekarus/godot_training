@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground_Tile_01_C.png-fe3b6f3bd964733c81b60b12e8e607ac.stex"
+path="res://.import/survivor-move_rifle_3.png-8696a7324f26d749d8f1e8804f313815.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiles/Ground_Tile_01_C.png"
-dest_files=[ "res://.import/Ground_Tile_01_C.png-fe3b6f3bd964733c81b60b12e8e607ac.stex" ]
+source_file="res://assets/Character/Anim_Rifle/move/survivor-move_rifle_3.png"
+dest_files=[ "res://.import/survivor-move_rifle_3.png-8696a7324f26d749d8f1e8804f313815.stex" ]
 
 [params]
 

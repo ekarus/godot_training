@@ -10,9 +10,9 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	var velocity = MovementDir * MOVE_SPEED * delta
+	var velocity = MovementDir * MOVE_SPEED
 	
-	move_and_collide(velocity)
+	move_and_slide(velocity)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

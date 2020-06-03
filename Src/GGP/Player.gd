@@ -36,3 +36,8 @@ func _process_input():
 		(activeWeapon as WeaponBase)._shoot(self.position + activeWeapon.position, -self.rotation_degrees)
 
 	pass
+	
+	
+func _input(event):
+	if event is InputEventMouseMotion:
+		look_at(event.position)

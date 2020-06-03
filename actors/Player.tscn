@@ -5,22 +5,21 @@
 [ext_resource path="res://actors/BaseWeapon.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 85.409
+radius = 72.8291
 
 [node name="BaseActor" type="KinematicBody2D"]
 position = Vector2( 0.857422, 0 )
 script = ExtResource( 2 )
-MOVE_SPEED = 200.0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -20.577, -57.4442 )
-rotation = -1.5708
+position = Vector2( 45.5264, -41.3256 )
+rotation = -0.0406293
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -5.93253, -23.5514 )
 shape = SubResource( 1 )
 
 [node name="Weapon" parent="." instance=ExtResource( 3 )]
-position = Vector2( 26.6001, -191.429 )
+position = Vector2( 183.028, -0.0845795 )
 rotation = 1.5708
-cooldownTime = 0.166

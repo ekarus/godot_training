@@ -1,15 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Tiles/ground_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=2]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Src/LevelUtils/EnemySpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Src/GGP/Crosshair.gd" type="Script" id=5]
+[ext_resource path="res://assets/csgo-crosshair-png-1.png" type="Texture" id=6]
 
 [node name="World" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="Crosshair" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 579.203, 41.7208 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

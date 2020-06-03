@@ -49,7 +49,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Src/GGP/Player.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "Area2D",
 "class": "Projectile",
 "language": "GDScript",
 "path": "res://Src/GGP/Projectile.gd"

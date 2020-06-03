@@ -12,7 +12,8 @@ region = Rect2( 426.531, 11.9227, 9.45374, 15.7562 )
 radius = 3.41119
 height = 6.65678
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Projectile" type="Area2D"]
+scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -23,3 +24,4 @@ texture = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.755749, -0.377874 )
 shape = SubResource( 2 )
+[connection signal="body_entered" from="." to="." method="_on_Projectile_body_entered"]

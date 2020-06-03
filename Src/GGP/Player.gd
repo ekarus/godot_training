@@ -33,7 +33,7 @@ func _process_input():
 	MovementDir = desiredDirection
 	
 	if Input.is_action_pressed("player_shoot"):
-		(activeWeapon as WeaponBase)._shoot(self.position + activeWeapon.position, -self.rotation_degrees)
+		(activeWeapon as WeaponBase)._shoot()
 
 	pass
 	

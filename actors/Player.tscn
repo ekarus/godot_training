@@ -20,6 +20,13 @@ texture = ExtResource( 1 )
 position = Vector2( -5.93253, -23.5514 )
 shape = SubResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -10.1229, -14.4175 )
+rotation = 1.5708
+zoom = Vector2( 2, 2 )
+smoothing_enabled = true
+smoothing_speed = 7.0
+
 [node name="Weapon" parent="." instance=ExtResource( 3 )]
 position = Vector2( 183.028, -0.0845795 )
 rotation = 1.5708

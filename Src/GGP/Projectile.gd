@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 class_name Projectile
 
 export var speed := 1650.0
@@ -17,9 +17,14 @@ func _ready():
 	add_child(timer)
 
 func _physics_process(delta: float) -> void:
-	var collision := move_and_collide(speed * direction * delta)
-	if collision:
+	global_position += speed * -direction * delta
+	pass
+
+func _on_Projectile_body_entered(body):
+	if body is Actor:
+		(body as Actor)._apply_damage(damage)
 		destroy()
+	pass # Replace with function body.
 
 func destroy():
 #	self.set_is_active = false

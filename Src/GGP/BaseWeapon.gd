@@ -13,13 +13,13 @@ func _ready():
 	cooldown.wait_time = cooldownTime
 	pass # Replace with function body.
 
-func _shoot(shot_positon : Vector2, shot_orientation : float):
+func _shoot():
 	if !cooldown.is_stopped() or not Projectile:
 		return
 
 	var proj : Projectile = Projectile.instance()
-	proj.global_position = shot_positon
-	proj.rotation = shot_orientation + deg2rad(random_spread(spread))
+	proj.global_position = self.global_position
+	proj.rotation = self.global_rotation + deg2rad(random_spread(spread))
 	proj.speed *= 1.0 + random_spread(0.4)
 #	proj.shooter = owner
 

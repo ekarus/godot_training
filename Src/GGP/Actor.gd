@@ -18,3 +18,6 @@ func _physics_process(delta):
 
 func _process(delta):
 	look_at(TargetPoint)
+
+func _apply_damage(amount):
+	pass

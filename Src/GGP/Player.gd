@@ -49,10 +49,12 @@ func _process_input():
 		
 	if Input.is_action_pressed("player_shoot") && cooldown.is_stopped():
 		(activeWeapon as WeaponBase)._shoot()
+		PlayerData.set_ammo(activeWeapon.currentAmmo, activeWeapon.MAG_AMMO)
 		emit_signal("on_player_shoot")
 	
 	if Input.is_action_pressed("player_weapon_reload") && activeWeapon._can_reload(): 
 		activeWeapon._reload()
+		PlayerData.set_ammo(activeWeapon.currentAmmo, activeWeapon.MAG_AMMO)
 		
 	pass
 	
@@ -63,6 +65,7 @@ func _switch_weapon(weapon_type):
 			activeWeapon = $Rifle
 		WEAPON_TYPE.WEAPON_SHOTGUN:
 			activeWeapon = $Shotgun
+	PlayerData.set_ammo(activeWeapon.currentAmmo, activeWeapon.MAG_AMMO)
 	cooldown.wait_time = activeWeapon.DRAW_COOLDOWN
 	cooldown.start()
 	pass

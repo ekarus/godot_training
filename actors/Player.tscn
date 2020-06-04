@@ -40,13 +40,11 @@ RELOAD_TIME = 5
 MAG_AMMO = 8
 DRAW_COOLDOWN = 3.0
 PELLETS_NUM = 8
-SPREAD_DEG = 0.5
 
 [node name="Rifle" parent="." instance=ExtResource( 3 )]
 position = Vector2( 184.225, 7.10027 )
 rotation = 1.5708
 spread = 10.0
-cooldownTime = 0.166
 
 [node name="ReloadCooldown" type="Timer" parent="."]
 one_shot = true

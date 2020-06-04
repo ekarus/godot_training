@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/Tiles/ground_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=2]
@@ -6,17 +6,22 @@
 [ext_resource path="res://Src/LevelUtils/EnemySpawner.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Src/GGP/Crosshair.gd" type="Script" id=5]
 [ext_resource path="res://assets/csgo-crosshair-png-1.png" type="Texture" id=6]
+[ext_resource path="res://UI/PauseMenu.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource( 2 )]
-
-[node name="Crosshair" type="Sprite" parent="CanvasLayer"]
+[node name="Crosshair" type="Sprite" parent="UserInterface"]
 position = Vector2( 579.203, 41.7208 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
+
+[node name="HUD" parent="UserInterface" instance=ExtResource( 2 )]
+
+[node name="PauseMenu" parent="UserInterface" instance=ExtResource( 7 )]
+visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -27,3 +32,5 @@ tile_data = PoolIntArray( -196612, 2, 0, -262144, 5, 0, -262140, 5, 0, -262136, 
 position = Vector2( 550, 324 )
 
 [node name="EnemySpawner" parent="." instance=ExtResource( 4 )]
+
+[editable path="Player"]

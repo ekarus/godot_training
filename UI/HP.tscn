@@ -1,17 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Texture/Ресурс 3.png" type="Texture" id=1]
 [ext_resource path="res://Texture/progress.png" type="Texture" id=2]
 [ext_resource path="res://UI/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://Texture/hp.png" type="Texture" id=4]
 [ext_resource path="res://Texture/Ресурс 7.png" type="Texture" id=5]
+[ext_resource path="res://UI/HP.gd" type="Script" id=6]
 
-[node name="Bar" type="HBoxContainer"]
+[node name="HealthBar" type="HBoxContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -729.0
 margin_bottom = -565.0
+rect_min_size = Vector2( 295, 35 )
 custom_constants/separation = 3
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -48,7 +51,7 @@ margin_top = -16.5
 margin_right = -6.0588
 margin_bottom = 15.5
 theme = ExtResource( 3 )
-text = "10/100"
+text = "100"
 align = 2
 valign = 1
 autowrap = true

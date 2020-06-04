@@ -7,7 +7,7 @@ onready var cooldown: Timer = $Cooldown
 export (PackedScene) var Projectile
 export var spread = .15
 export var cooldownTime = 0.166
-export var RELOAD_TIME = 3
+export var RELOAD_TIME = 3.0
 export var MAG_AMMO = 30
 export var DRAW_COOLDOWN = 0.5
 
@@ -21,11 +21,12 @@ func _ready():
 func _shoot():
 	if !cooldown.is_stopped() or not Projectile:
 		return
-
+	
 	var proj : Projectile = Projectile.instance()
 	proj.global_position = self.global_position
 	proj.rotation = self.global_rotation + deg2rad(random_spread(spread))
 	proj.speed *= 1.0 + random_spread(0.4)
+	$Shoot_sound.play()
 #	proj.shooter = owner
 
 	ObjectRegistry.register_projectile(proj)
@@ -55,5 +56,6 @@ func _reload():
 	cooldown.wait_time = RELOAD_TIME
 	print_debug("Reloading")
 	currentAmmo = MAG_AMMO
+	$Reload_sound.play()
 	# TODO: Some feedback for reloading
 	pass

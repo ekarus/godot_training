@@ -35,16 +35,17 @@ script = ExtResource( 6 )
 position = Vector2( 179.373, 9.04404 )
 rotation = 1.5708
 Projectile = ExtResource( 5 )
-cooldownTime = 0.5
-RELOAD_TIME = 5
+cooldownTime = 0.7
+RELOAD_TIME = 2.6
 MAG_AMMO = 8
-DRAW_COOLDOWN = 3.0
+DRAW_COOLDOWN = 1.0
 PELLETS_NUM = 8
 
 [node name="Rifle" parent="." instance=ExtResource( 3 )]
 position = Vector2( 184.225, 7.10027 )
 rotation = 1.5708
 spread = 10.0
+DRAW_COOLDOWN = 1.5
 
 [node name="ReloadCooldown" type="Timer" parent="."]
 one_shot = true

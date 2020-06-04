@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_rifle_shot.wav-fff21b7aab1bf4ca5ad5c882b27ceb53.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/sfx_rifle_shot.wav"
+dest_files=[ "res://.import/sfx_rifle_shot.wav-fff21b7aab1bf4ca5ad5c882b27ceb53.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

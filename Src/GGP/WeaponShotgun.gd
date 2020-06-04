@@ -23,10 +23,11 @@ func _shoot():
 		proj.rotation = self.global_rotation + pelletRotation + deg2rad(random_spread(spread))
 		proj.speed *= 1.0 + random_spread(0.4)	
 		pelletRotation += pelletRotationStep
-	
+
 	#	proj.shooter = owner
 		ObjectRegistry.register_projectile(proj)
 	
+	$Shot_sound.play()
 	currentAmmo -= 1
 	if currentAmmo > 0:
 		cooldown.wait_time = cooldownTime * (1.0 + random_spread(0.2))
